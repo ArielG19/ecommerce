@@ -12,6 +12,7 @@ class ShoppingCart extends Model
     //metodo para saber cuentos productos hay en el carrito
 	public function productSize(){
 		return $this->id;
+		//return 3;
 	}
 
     //creamos un metodo para buscar sesion o crearla
