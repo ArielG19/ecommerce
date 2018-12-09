@@ -9,10 +9,21 @@ class ShoppingCart extends Model
     //
     protected $fillable = ['estado'];
 
+    //creamos las relaciones para el carrito ---------------------------
+    public function inShoppingCarts(){
+		return $this->hasMany('App\InShoppingCart');
+	}
+
+	//para crear la relacion agregamos tambien la tabla pivot con la que esta relacionada
+	public function products(){
+		return $this->belongsToMany('App\Product','in_shopping_carts');
+	}
+	//fin de las relaciones para el carrito -----------------------------
+
     //metodo para saber cuentos productos hay en el carrito
 	public function productSize(){
-		return $this->id;
-		//return 3;
+		//return $this->id;
+		return $this->products()->count();
 	}
 
     //creamos un metodo para buscar sesion o crearla
