@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('productos','ProductosController');
 Route::get('listar-productos','ProductosController@listarProductos');
+
+//contralor para agregar productos al carrito
+Route::resource('in-shopping-cart','InShoppingCartController');
+Route::get('mostrar-productos','InShoppingCartController@mostrar');

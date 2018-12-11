@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
      <!-- Styles -->
     <link rel="stylesheet" href="/cdn/bootstrap.css">
     <!--Toas css-->
@@ -58,10 +59,9 @@
                         <li class="nav-item">
 
                             <a class="nav-link" href="">
-                                <span class="circle-shopping-cart">
-                                    Carrito
+                                    <i class="fas fa-shopping-cart">
                                     {{$shopping_cart->productSize()}}
-                                </span>
+                                    </i>
                             </a>
                         </li>
                         @guest
